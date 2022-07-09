@@ -1,0 +1,14 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let dog of dogs">
+            <div class="bg-image hover-overlay" mdbRipple rippleColor="light">
+              <img [src]="pics[dogs.indexOf(dog)]" class="img-fluid"/>
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">{{dog}}</h5>
+              <a (click)="dogDetails(dog, pics[dogs.indexOf(dog)])"routerLink="/dog-details"  class="btn btn-primary">Detalles</a>
+            </div>
+    </div>
+  </div>
